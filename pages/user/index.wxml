@@ -1,0 +1,63 @@
+<view class="user_info_wrap">
+    <view class="user_img_wrap">
+        <block wx:if="{{userInfo.nickName}}">
+            <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+            <veiw class="user_info">
+                <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+                <view class="user_name">{{userInfo.nickName}}</view>
+            </veiw>
+        </block>
+        <button wx:else bind:tap="handleLogin">登录</button>
+    </view>
+    <view class="user_content">
+        <view class="user_main">
+            <view class="collection">
+                <view class="item">
+                    <text class="num">0</text>
+                    <text class="text" bindtap="commonToast">收藏的店铺</text>
+                </view>
+                <navigator class="item" url="/pages/collect/index">
+                    <text class="num">{{collectNum}}</text>
+                    <text class="text">收藏的商品</text>
+                </navigator>
+                <view class="item">
+                    <text class="num">0</text>
+                    <text class="text" bindtap="commonToast">关注的商品</text>
+                </view>
+                <view class="item">
+                    <text class="num">0</text>
+                    <text class="text" bindtap="commonToast">我的足迹</text>
+                </view>
+            </view>
+            <view class="user_order">
+                <view class="my">我的订单</view>
+                <view class="order">
+                    <view class="item">
+                        <view class="iconfont icon-dingdan"></view>
+                        <text bind:tap="commonToast">我的订单</text>
+                    </view>
+                    <view class="item">
+                        <view class="iconfont icon-fukuantongzhi"></view>
+                        <text>待付款</text>
+                    </view>
+                    <view class="item">
+                        <view class="iconfont icon-nogoods"></view>
+                        <text>待收货</text>
+                    </view>
+                    <view class="item">
+                        <view class="iconfont icon-qian"></view>
+                        <text>退款/退货</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods_address">收货地址管理</view>
+            <button class="item customer" open-type="contact">
+                <text>联系客服</text>
+                <text>400-619-2222</text>
+            </button>
+            <navigator class="item" url="/pages/feedback/index">意见反馈</navigator>
+            <view class="item">关于我们</view>
+            <button class="item btn" open-type="share">把应用程序推荐给其他人</button>
+        </view>
+    </view>
+</view>

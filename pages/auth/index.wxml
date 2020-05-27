@@ -1,0 +1,3 @@
+<button type="primary" open-type="getUserInfo" bind:tap="handleAuth" bindgetuserinfo="bindGetUserInfo" plain>
+    获取授权
+</button>

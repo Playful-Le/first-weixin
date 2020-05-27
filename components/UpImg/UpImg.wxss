@@ -1,0 +1,11 @@
+.up_img_wrap {
+  width: 200rpx;
+  height: 100rpx;
+  position: relative;
+  z-index: 2;
+}
+.up_img_wrap image {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+}

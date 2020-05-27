@@ -37,7 +37,7 @@ Page({
       searchGoods: res.data.message
     })
   },
-  handelCancel(){
+  handleCancel(){
     this.setData({
       searchGoods: [],
       inputValue: '',
